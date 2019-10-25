@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Brian Palac's Bio</title>
+  </head>
+  <body>
+
+    <div class="container">
+        <header class="row justify-content-between">
+            <div class="col-lg-3 offset-lg-1" style="background-color: #43a39e;">
+                <h1 id="header1-settings">Brian Palac</h1>
+            </div>
+            <nav class="col-lg-4">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Bio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div class="content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1" style="background: white">
+                    
+                    <main>
+                    <div class="page-header">
+                        <h2 class="header-settings">About Me</h2>
+                    </div>
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 align-self-center">
+                            <img id="img-setting" src="https://bayareaplays.files.wordpress.com/2015/04/headshotb.jpg" class="rounded mx-auto d-block" class="img-fluid" alt="Brian Palac's headshot">
+                            </a>
+                        </div>
+                        <div class="col-lg-8" style="margin-top: 20px">
+                            <p class="content">
+                                I am a resident of San Leandro, CA, who recently just completed Full Stack Web Development program at UC Berkeley adding to my Bachelor's degree in Electronics Engineering. I have worked for a little over 20
+                                years, mostly, in the tech industry. I worked at Intel for ten years straight out of college and recently, at Lawrence
+                                Livermore National Lab for three years.
+                            </p>
+                            <p class="content">I really wanted to tap into my creative side thus my investment in coding bootcamp 
+                                to hopefully reignite the passion that I need, to feel inspired in a work place. And at this moment, I am loving every day of it! I hope to challenge myself to code everyday to hone
+                                my skills and find a job where I can learn from great mentors and feel supported and encouraged so I could be a mentor for others in the years ahead.
+                                    
+                            </p>
+                            <p class="content">I am highly independent, adaptable, timely, a fast learner, hard worker and a doer.
+                                Constantly praised for excellent technical ability, organization and communication skills by supervisors, engineers and peers - skills that help me succeed in any job role. 
+                                I am confident that these traits I possess will also help me succeed in this new endeavor I am
+                                going to take.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 align-self-center"  style="padding-left: 20px">
+                            <p><u>Technical Skills</u>: Node.Js • Express • JavaScript • jQuery • React.js • Redux • GIT • Github • MongoDB • Mongoose • MySQL • Sequelize • Firebase • HTML • CSS • Bootstrap • Media Queries • APIs • JSON • REST • AJAX • The Command line • Computer Science fundamentals
+                            </p>
+                        </div>
+                    </div>
+                    </main>
+
+                    <aside>
+                    <div class="page-header">
+                        <h3 class="header-settings">And there's more...</h3>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-12 align-self-center"  style="padding-left: 20px">
+                            <p>On my free time, I perform in musical theatre shows around the Bay Area for a little over ten years now! I am proud to be a recent recipient
+                               of the Theater Bay Area Awards. Feel free to check out my videos or follow me on <a id="youtube" href="https://www.youtube.com/user/doybrian">my Youtube channel</a>.
+                            </p>
+                            <p>Here is one of my recordings. It is a cover of the song "Mad World" popularized by Gary Jules for the soundtrack of the film Donie Darko in 2001.</p>
+                            
+                            <section class="player">
+                                <audio>
+                                    <source src="./assets/Mad World.mp3" type="audio/mp3">
+                                    <p>Your browser doesn't support HTML5 audio. Here is a <a href="./assets/Mad World.mp3">link to the audio</a> instead.</p>
+                                </audio>
+                                <div aria-label="audio player custom controls" class="controls">
+                                    <button title="Play or pause Brian Palac's cover of Mad World" class="playpause">Play</button>
+                                    <button title="Stop playing song" class="stop">Stop</button>
+                                    <button title="Go back 3 seconds from the current elapsed time" class="rwd">Rewind</button>
+                                    <button title="Go forward 3 seconds into the song" class="fwd">Forward</button>
+                                    <div class="time">00:00</div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-setting">
+        <footer class="container">
+            Hello World!
+        </footer>
+    </div>
+
+    <script>
+    var playPauseBtn = document.querySelector('.playpause');
+    var stopBtn = document.querySelector('.stop');
+    var rwdBtn = document.querySelector('.rwd');
+    var fwdBtn = document.querySelector('.fwd');
+    var timeLabel = document.querySelector('.time');
+    
+    var player = document.querySelector('audio');
+
+    player.removeAttribute('controls');
+
+    playPauseBtn.onclick = function() {
+        if(player.paused) {
+            player.play();
+            playPauseBtn.textContent = 'Pause';
+        } else {
+            player.pause();
+            playPauseBtn.textContent = 'Play';
+        }
+    };
+
+    stopBtn.onclick = function() {
+        player.pause();
+        player.currentTime = 0;
+        playPauseBtn.textContent = 'Play';
+    };
+
+    rwdBtn.onclick = function() {
+        player.currentTime -= 3;
+    };
+
+    fwdBtn.onclick = function() {
+        player.currentTime += 3;
+        if(player.currentTime >= player.duration || player.paused) {
+            player.pause();
+            player.currentTime = 0;
+            playPauseBtn.textContent = 'Play';
+        }
+    };
+
+    player.ontimeupdate = function() {
+        var minutes = Math.floor(player.currentTime / 60);
+        var seconds = Math.floor(player.currentTime - minutes * 60);
+        var minuteValue;
+        var secondValue;
+
+        if (minutes<10) {
+            minuteValue = "0" + minutes;
+        } else {
+            minuteValue = minutes;
+        }
+
+        if (seconds<10) {
+            secondValue = "0" + seconds;
+        } else {
+            secondValue = seconds;
+        }
+
+        mediaTime = minuteValue + ":" + secondValue;
+        timeLabel.textContent = mediaTime;
+    };
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
