@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Brian Palac's Contact page</title>
+    <title>Brian Palac's Contact Page</title>
 
   </head>
   <body>
@@ -44,7 +44,7 @@
                     </div>
 
                     <div id="input-settings">
-                        <div><ul id="status_message" role="alert"></ul></div>
+                        <div id="status" role="alert"></div>
                         <p><strong>Note:</strong> * indicates a required field</p>
 
                         <form name="form1" id="contact-form" onsubmit="return ValidateForm()">
@@ -89,10 +89,10 @@
 
                         <section aria-label="media links" style="text-align: center">
                         <a title="To Contact by phone" href="tel:+12099142134"><i class="fas fa-mobile-alt fa-2x fa-fw"></i></a>
-                        <a title="To View Resume" href="https://drive.google.com/file/d/1ye8Z3O2UhyTkT3YihiotgmkVNmN5Z5x6/view?usp=sharing" target="_blank"><i class="far fa-file fa-2x fa-fw"></i></a>
-                        <a title="Linkedin Profile" href="https://www.linkedin.com/in/brian-cagadas-095712b5/" target="_blank"><i class="fab fa-linkedin-in fa-2x fa-fw"></i></a>
-                        <a title="Github Repositories" href="https://github.com/doyBrian" target="_blank"><i class="fab fa-github fa-2x fa-fw"></i></a>
-                        <a title="Twitter Account" href="https://twitter.com/brianpcag" target="_blank"><i class="fab fa-twitter fa-2x fa-fw"></i></a>
+                        <a title="To View Resume, opens new tab or window" href="https://drive.google.com/file/d/1ye8Z3O2UhyTkT3YihiotgmkVNmN5Z5x6/view?usp=sharing" target="_blank"><i class="far fa-file fa-2x fa-fw"></i></a>
+                        <a title="Linkedin Profile, opens new tab or window" href="https://www.linkedin.com/in/brian-cagadas-095712b5/" target="_blank"><i class="fab fa-linkedin-in fa-2x fa-fw"></i></a>
+                        <a title="Github Repositories, opens new tab or window" href="https://github.com/doyBrian" target="_blank"><i class="fab fa-github fa-2x fa-fw"></i></a>
+                        <a title="Twitter Account, opens new tab or window" href="https://twitter.com/brianpcag" target="_blank"><i class="fab fa-twitter fa-2x fa-fw"></i></a>
                         </section>
 
                     </div>                   
@@ -114,7 +114,7 @@
                 $("#invalid_name").empty();
                 $("#invalid_email").empty();
                 $("#invalid_message").empty();
-                $("#status_message").empty();
+                $("#status").empty();
 
                 var name = document.getElementById("name").value;
                 var email = document.getElementById("email").value;
@@ -124,7 +124,7 @@
             
                 if( name == "")
                 {   
-                    $("#status_message").append("Error(s)! Please correct the following before proceeding:<li>Please type in a name.</li>");
+                    $("#status").append("<ul id='status_message'>Error(s)! Please correct the following before proceeding:<li>Please type in a name.</li></ul>");
                     document.getElementById("invalid_name").innerText=" Error: Required field. Please type in a name."; 
                     document.getElementById("name").focus();
                     tracker = false;
@@ -134,7 +134,7 @@
                 {
                     if(tracker)
                     {
-                        $("#status_message").append("Error(s)! Please correct the following before proceeding:<li>Please type in an email address.</li>");
+                        $("#status").append("<ul id='status_message'>Error(s)! Please correct the following before proceeding:<li>Please type in an email address.</li></ul>");
                         document.getElementById("email").focus();
                     }
                     else
@@ -148,7 +148,7 @@
                     {
                         if(tracker)
                         {
-                            $("#status_message").append("Error(s)! Please correct the following before proceeding:<li>Please type in a valid email address.</li>");
+                            $("#status").append("<ul id='status_message'>Error(s)! Please correct the following before proceeding:<li>Please type in a valid email address.</li></ul>");
                             document.getElementById("email").focus(); 
                         }                          
                         else
@@ -163,7 +163,7 @@
                 {
                     if(tracker)
                     {
-                        $("#status_message").append("Error(s)! Please correct the following before proceeding:<li>Please type in a message.</li>");
+                        $("#status").append("<ul id='status_message'>Error(s)! Please correct the following before proceeding:<li>Please type in a message.</li></ul>");
                         document.getElementById("message").focus();
                     }
                     else
